@@ -6,7 +6,6 @@
  * found in the LICENSE file at https://github.com/NG-ZORRO/ng-zorro-antd/blob/master/LICENSE
  */
 
-import { QueryList } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 
 import { NzCarouselContentDirective } from '../nz-carousel-content.directive';
@@ -14,7 +13,7 @@ import { NzCarouselContentDirective } from '../nz-carousel-content.directive';
 import { NzCarouselBaseStrategy } from './base-strategy';
 
 export class NzCarouselOpacityStrategy extends NzCarouselBaseStrategy {
-  withCarouselContents(contents: QueryList<NzCarouselContentDirective> | null): void {
+  withCarouselContents(contents: any | null): void {
     super.withCarouselContents(contents);
 
     if (this.contents) {

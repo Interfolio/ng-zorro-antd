@@ -60,7 +60,6 @@
     "new-parens": true,
     "no-angle-bracket-type-assertion": true,
     "member-access": false,
-    "no-any": true,
     "no-arg": true,
     "no-bitwise": false,
     "no-consecutive-blank-lines": [true],

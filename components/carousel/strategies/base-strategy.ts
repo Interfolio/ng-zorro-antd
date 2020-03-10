@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://github.com/NG-ZORRO/ng-zorro-antd/blob/master/LICENSE
  */
 
-import { ChangeDetectorRef, QueryList, Renderer2 } from '@angular/core';
+import { ChangeDetectorRef, Renderer2 } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { NzCarouselContentDirective } from '../nz-carousel-content.directive';
@@ -46,7 +46,7 @@ export abstract class NzCarouselBaseStrategy {
    * Initialize dragging sequences.
    * @param contents
    */
-  withCarouselContents(contents: QueryList<NzCarouselContentDirective> | null): void {
+  withCarouselContents(contents: any | null): void {
     // TODO: carousel and its contents should be separated.
     const carousel = this.carouselComponent!;
     const rect = carousel.el.getBoundingClientRect();
