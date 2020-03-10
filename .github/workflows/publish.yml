@@ -1,4 +1,4 @@
-name: Pull request labeler
+name: Publish Package
 on:
   push:
     branches:
@@ -15,6 +15,7 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
       - run: npm install
       - run: npm run build:lib
+      - run: npm run update:package
       - run: npm publish publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
