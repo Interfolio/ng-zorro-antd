@@ -16,7 +16,7 @@
     "test:schematics": "gulp build:schematics && gulp test:schematics",
     "build": "gulp build:release",
     "build:lib": "gulp build:library",
-    "update:package": "json -I -f publish/package.json -e 'this.name=\"@interfolio/ng-zorro-antd\"' -e 'this.version=\"0.0.3\"'",
+    "update:package": "json -I -f publish/package.json -e 'this.name=\"interfolio/ng-zorro-antd\"' -e 'this.version=\"0.0.4\"'",
     "doc": "gulp build:preview",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s --pkg components/package.json && node ./scripts/site/replace-scope-prefix.js",
     "format": "prettier --config ./.prettierrc --list-different \"component/**/*{.ts}\"",
