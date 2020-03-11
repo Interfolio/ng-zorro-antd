@@ -57,9 +57,10 @@
       <li class="ant-pagination-jump-prev"
           *ngIf="(lastIndex > 9) && (nzPageIndex - 3 > firstIndex)"
           [attr.title]="locale.prev_5"
-          (click)="jumpDiff(-5)">
+          (click)="jumpDiff(-5)"
+          (keydown.enter)="jumpDiff(-5)">
         <a class="ant-pagination-item-link">
-          <div class="ant-pagination-item-container">
+          <div role="button" tabindex="0" class="ant-pagination-item-container">
             <i nz-icon nzType="double-left" class="ant-pagination-item-link-icon"></i>
             <span class="ant-pagination-item-ellipsis">•••</span>
           </div>
@@ -76,9 +77,10 @@
       <li class="ant-pagination-jump-next ant-pagination-item-link-icon"
           [attr.title]="locale.next_5"
           (click)="jumpDiff(5)"
+          (keydown.enter)="jumpDiff(5)"
           *ngIf="(lastIndex > 9) && (nzPageIndex + 3 < lastIndex)">
         <a class="ant-pagination-item-link">
-          <div class="ant-pagination-item-container">
+          <div role="button" tabindex="0" class="ant-pagination-item-container">
             <i nz-icon nzType="double-right" class="ant-pagination-item-link-icon"></i>
             <span class="ant-pagination-item-ellipsis">•••</span>
           </div>

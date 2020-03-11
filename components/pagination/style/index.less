@@ -79,6 +79,7 @@
     outline: 0;
     .@{pagination-prefix-cls}-item-container {
       position: relative;
+      outline: none;
 
       .@{pagination-prefix-cls}-item-link-icon {
         .iconfont-size-under-12px(12px);
@@ -111,15 +112,14 @@
         opacity: 1;
         transition: all 0.2s;
       }
-    }
-
-    &:focus,
-    &:hover {
-      .@{pagination-prefix-cls}-item-link-icon {
-        opacity: 1;
-      }
-      .@{pagination-prefix-cls}-item-ellipsis {
-        opacity: 0;
+      &:focus,
+      &:hover {
+        .@{pagination-prefix-cls}-item-link-icon {
+          opacity: 1;
+        }
+        .@{pagination-prefix-cls}-item-ellipsis {
+          opacity: 0;
+        }
       }
     }
   }
