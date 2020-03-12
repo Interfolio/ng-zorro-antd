@@ -33,57 +33,42 @@
 
   &-item {
     display: inline-block;
-    min-width: @pagination-item-size;
-    height: @pagination-item-size;
     margin-right: 8px;
-    font-family: @pagination-font-family;
-    line-height: @pagination-item-size - 2px;
-    text-align: center;
-    vertical-align: middle;
-    list-style: none;
-    background-color: @component-background;
-    border: @border-width-base @border-style-base @border-color-base;
-    border-radius: @border-radius-base;
-    outline: 0;
-    cursor: pointer;
-    user-select: none;
 
-    a {
-      display: block;
-      padding: 0 6px;
-      color: @text-color;
-      transition: none;
-
-      &:hover {
-        text-decoration: none;
-      }
+    button {
+      min-width: @pagination-item-size;
+      height: @pagination-item-size;
+      font-family: @pagination-font-family;
+      line-height: @pagination-item-size - 2px;
+      text-align: center;
+      vertical-align: middle;
+      list-style: none;
+      background-color: @component-background;
+      border: @border-width-base @border-style-base @border-color-base;
+      border-radius: @border-radius-base;
+      outline: 0;
+      cursor: pointer;
+      user-select: none;
     }
 
-    &:focus,
-    &:hover {
+    button:focus,
+    button:hover  {
       border-color: @primary-color;
+      color: @primary-color;
       transition: all 0.3s;
-      a {
-        color: @primary-color;
-      }
     }
 
     &-active {
-      font-weight: @pagination-font-weight-active;
-      background: @pagination-item-bg-active;
-      border-color: @primary-color;
-
-      a {
+      button {
         color: @primary-color;
+        font-weight: @pagination-font-weight-active;
+        background: @pagination-item-bg-active;
+        border-color: @primary-color;
       }
 
-      &:focus,
-      &:hover {
+      button:focus,
+      button:hover {
         border-color: @primary-5;
-      }
-
-      &:focus a,
-      &:hover a {
         color: @primary-5;
       }
     }
@@ -94,6 +79,7 @@
     outline: 0;
     .@{pagination-prefix-cls}-item-container {
       position: relative;
+      outline: none;
 
       .@{pagination-prefix-cls}-item-link-icon {
         .iconfont-size-under-12px(12px);
@@ -126,15 +112,14 @@
         opacity: 1;
         transition: all 0.2s;
       }
-    }
-
-    &:focus,
-    &:hover {
-      .@{pagination-prefix-cls}-item-link-icon {
-        opacity: 1;
-      }
-      .@{pagination-prefix-cls}-item-ellipsis {
-        opacity: 0;
+      &:focus,
+      &:hover {
+        .@{pagination-prefix-cls}-item-link-icon {
+          opacity: 1;
+        }
+        .@{pagination-prefix-cls}-item-ellipsis {
+          opacity: 0;
+        }
       }
     }
   }
@@ -166,13 +151,10 @@
   &-next {
     outline: 0;
 
-    a {
+    button {
       color: @text-color;
       user-select: none;
-    }
-
-    &:hover a {
-      border-color: @primary-5;
+      padding: 0 9px;
     }
 
     .@{pagination-prefix-cls}-item-link {
@@ -185,12 +167,13 @@
       border-radius: @border-radius-base;
       outline: none;
       transition: all 0.3s;
-    }
+      cursor: pointer;
 
-    &:focus .@{pagination-prefix-cls}-item-link,
-    &:hover .@{pagination-prefix-cls}-item-link {
-      color: @primary-color;
-      border-color: @primary-color;
+      &:focus,
+      &:hover {
+        color: @primary-color;
+        border-color: @primary-color;
+      }
     }
   }
 

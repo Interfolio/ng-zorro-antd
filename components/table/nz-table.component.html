@@ -1,7 +1,7 @@
 <ng-template #renderItemTemplate let-type let-page="page">
-  <a class="ant-pagination-item-link" *ngIf="type==='pre'"><i nz-icon nzType="left"></i></a>
-  <a class="ant-pagination-item-link" *ngIf="type==='next'"><i nz-icon nzType="right"></i></a>
-  <a *ngIf="type=='page'">{{ page }}</a>
+  <button class="ant-pagination-item-link" *ngIf="type==='pre'"><i nz-icon nzType="left"></i></button>
+  <button class="ant-pagination-item-link" *ngIf="type==='next'"><i nz-icon nzType="right"></i></button>
+  <button *ngIf="type=='page'">{{ page }}</button>
 </ng-template>
 <ng-template #colGroupTemplate>
   <colgroup>
