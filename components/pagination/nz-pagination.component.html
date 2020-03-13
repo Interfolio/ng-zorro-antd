@@ -1,11 +1,11 @@
 <ng-template #renderItemTemplate let-type let-page="page">
-  <a class="ant-pagination-item-link" *ngIf="type==='pre'">
+  <button class="ant-pagination-item-link" *ngIf="type==='pre'">
     <i nz-icon nzType="left"></i>
-  </a>
-  <a class="ant-pagination-item-link" *ngIf="type==='next'">
+  </button>
+  <button class="ant-pagination-item-link" *ngIf="type==='next'">
     <i nz-icon nzType="right"></i>
-  </a>
-  <a *ngIf="type=='page'">{{ page }}</a>
+  </button>
+  <button *ngIf="type=='page'">{{ page }}</button>
 </ng-template>
 <ng-container *ngIf="(nzHideOnSinglePage && (nzTotal > nzPageSize)) || (nzTotal && !nzHideOnSinglePage)">
   <ul class="ant-pagination"
